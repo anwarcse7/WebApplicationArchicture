@@ -12,4 +12,7 @@ public interface IProductRepository extends CrudRepository<Product, Integer> {
     public List<Product> getProductByNameContains(String name);
 
     public List<Product> getProductByCategory(Category cat);
+
+    public List<Product> getProductByRatingGreaterThan(int r);
+
 }

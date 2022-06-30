@@ -1,6 +1,7 @@
 package edu.miu.productreview.repository;
 
 import edu.miu.productreview.model.Review;
+import org.apache.catalina.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -10,4 +11,6 @@ import java.util.List;
 public interface IReviewRepository extends CrudRepository<Review, Integer> {
 //    public List<Review> findReviewByProductById(int id);
     public List<Review> getReviewByProductId(int id);
+
+    public List<Review> getByCommentIsNull();
 }

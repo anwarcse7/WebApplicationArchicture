@@ -55,4 +55,10 @@ public class ProductService implements IProductService {
     public List<Product> getProductByCategory(Category category) {
         return (List<Product>) productRepository.getProductByCategory(category);
     }
+
+    @Override
+    public List<Product> getProductByRating(int a) {
+        return (List<Product>) productRepository.getProductByRatingGreaterThan(a);
+    }
+
 }

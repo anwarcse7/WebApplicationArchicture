@@ -17,4 +17,6 @@ public interface IProductService {
     public List<Product> getProductByNameContains(String name);
 
     public List<Product> getProductByCategory(Category category);
+
+    public List<Product> getProductByRating(int a);
 }

@@ -52,4 +52,9 @@ public class ProductController {
         return productService.getProductByCategory(category);
     }
 
+    @GetMapping("/productByRating/{rating}")
+    public List<Product> getProductByRating(@PathVariable int rating) {
+        return productService.getProductByRating(rating);
+    }
+
 }
